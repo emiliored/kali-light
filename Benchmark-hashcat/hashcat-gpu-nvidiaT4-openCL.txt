@@ -1,0 +1,36 @@
+(base) emiliored@debian-gpu:~$ hashcat -d 2 -m 22000 -b
+hashcat (v6.1.1) starting in benchmark mode...
+
+Benchmarking uses hand-optimized kernel code by default.
+You can use it in your cracking session by setting the -O option.
+Note: Using optimized kernel code limits the maximum supported password length.
+To disable the optimized kernel code in benchmark mode, use the -w option.
+
+Kernel /usr/share/hashcat/OpenCL/m22000-optimized.cl:
+Optimized kernel requested but not needed - falling back to pure kernel
+
+nvmlDeviceGetFanSpeed(): Not Supported
+
+CUDA API (CUDA 12.4)
+====================
+* Device #1: Tesla T4, skipped
+
+OpenCL API (OpenCL 3.0 CUDA 12.4.131) - Platform #1 [NVIDIA Corporation]
+========================================================================
+* Device #2: Tesla T4, 14784/14917 MB (3729 MB allocatable), 40MCU
+
+OpenCL API (OpenCL 1.2 pocl 1.6, None+Asserts, LLVM 9.0.1, RELOC, SLEEF, DISTRO, POCL_DEBUG) - Platform #2 [The pocl project]
+=============================================================================================================================
+* Device #3: pthread-Intel(R) Xeon(R) CPU @ 2.00GHz, skipped
+
+Benchmark relevant options:
+===========================
+* --backend-devices=2
+* --optimized-kernel-enable
+
+Hashmode: 22000 - WPA-PBKDF2-PMKID+EAPOL (Iterations: 4095)
+
+Speed.#2.........:   335.8 kH/s (60.82ms) @ Accel:8 Loops:256 Thr:1024 Vec:1
+
+Started: Sat Jul  6 08:53:06 2024
+Stopped: Sat Jul  6 08:53:30 2024
